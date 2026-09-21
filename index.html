@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Café Ámbar — Menú</title>
+  
+  <!-- Fuentes externas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app" id="app">
+
+    <div class="mini-header" id="miniHeader">
+      <span class="mark">☕</span> Café Ámbar
+    </div>
+
+    <header class="hero">
+      <div class="steam">
+        <svg viewBox="0 0 24 36"><path d="M6,34 Q10,26 6,18 Q2,10 6,2"/></svg>
+        <svg viewBox="0 0 24 36"><path d="M12,34 Q16,26 12,18 Q8,10 12,2"/></svg>
+        <svg viewBox="0 0 24 36"><path d="M18,34 Q22,26 18,18 Q14,10 18,2"/></svg>
+      </div>
+      <h1 class="hero-name"> Café Ámbar</h1>
+      <p class="hero-slogan">Cada taza, un buen comienzo.</p>
+      <div class="hero-cue">
+        <span>Desliza para ver el menú</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+    </header>
+
+    <main>
+      <section id="categoriesView">
+        <h2 class="section-title">Menú</h2>
+        <p class="section-sub">Elige una sección para ver los productos</p>
+        <div class="cat-grid" id="catGrid"></div>
+      </section>
+
+      <section id="menuView">
+        <div class="back-row" id="backRow" role="button" tabindex="0" aria-label="Volver a las secciones">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          <span>Secciones</span>
+        </div>
+        <h2 class="section-title" id="menuTitle"></h2>
+        <p class="section-sub" id="menuSub"></p>
+        <div class="item-grid" id="itemGrid"></div>
+      </section>
+    </main>
+
+    <footer>Precios en pesos mexicanos (MXN) · Hecho por Torreblanca Services</footer>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+      <div class="modal-icon" id="modalIcon"></div>
+      <h3 id="modalName"></h3>
+      <p class="price" id="modalPrice"></p>
+      <hr>
+      <div class="ingredients-full" id="modalIngredients"></div>
+    </div>
+  </div>
+
+  <!-- Lógica JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
